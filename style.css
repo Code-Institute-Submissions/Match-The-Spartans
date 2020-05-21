@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'MedievalSharp', cursive;
+    text-transform: uppercase;
+    margin: 0;
+    background: radial-gradient(red,rgb(129, 16, 16));
+}
+
+html {
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    font-size: 6em;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    font-size: 4em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
+
+.card {
+    background-color: black;
+    height: 175px;
+    width: 125px;
+}
+
+
