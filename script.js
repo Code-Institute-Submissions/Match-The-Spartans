@@ -51,6 +51,11 @@ class MatchTheSpartans {
         document.getElementById('game-over-text').classList.add('visible');
     }
 
+    victory(){
+        clearInterval(this.countDown);
+        document.getElementById('success-text').classList.add('visible');
+    }
+
 
     shuffleCards(cardsArray) {
         for (let i = this.cardsArray.length - 1; i > 0; i--) {
