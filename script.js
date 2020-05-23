@@ -14,17 +14,34 @@ class MatchTheSpartans {
         this.matchedCards = [];
         this.busy = true;
         setTimeout(() => {
-            this.shuffleCards();
-            this.countDown = this.startCountDown();
+            this.shuffleCards(this.cardsArray);
+            this.countdown = this.startCountdown();
             this.busy = false;
-        }, 500);
+        }, 500)
         this.hideCards();
-        this.timmer.innerText = this.timeRemaining;
-        this.clicker.innerText = this.totalClicks;
+        this.timer.innerText = this.timeRemaining;
+        this.ticker.innerText = this.totalClicks;
+    }
+    startCountdown() {
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.timer.innerText = this.timeRemaining;
+            if(this.timeRemaining === 0)
+                this.gameOver();
+        }, 1000);
+    }
+    gameOver() {
+        clearInterval(this.countdown);
+        document.getElementById('game-over-text').classList.add('visible');
+    }
+    victory() {
+        clearInterval(this.countdown);
+        document.getElementById('success-text').classList.add('visible');
     }
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
+            
         });
     }
     flipCard(card) {
@@ -33,41 +50,48 @@ class MatchTheSpartans {
             this.ticker.innerText = this.totalClicks;
             card.classList.add('visible');
 
-            //if statement
+            if(this.cardToCheck) {
+                this.checkForCardMatch(card);
+            } else {
+                this.cardToCheck = card;
+            }
         }
     }
+    checkForCardMatch(card) {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+        else 
+            this.cardMismatch(card, this.cardToCheck);
 
-    startCountDown(){
-        return setInterval(() => {
-            this.timeRemaining--;
-            this.timer.innerText = this.timeRemaining;
-            if(this.timeRemaining === 0)
-                this.gameOver();
+        this.cardToCheck = null;
+    }
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        
+        if(this.matchedCards.length === this.cardsArray.length)
+            this.victory();
+    }
+    cardMismatch(card1, card2) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('visible');
+            card2.classList.remove('visible');
+            this.busy = false;
         }, 1000);
     }
-
-    gameOver(){
-        clearInterval(this.countDown);
-        document.getElementById('game-over-text').classList.add('visible');
-    }
-
-    victory(){
-        clearInterval(this.countDown);
-        document.getElementById('success-text').classList.add('visible');
-    }
-
-
     shuffleCards(cardsArray) {
-        for (let i = this.cardsArray.length - 1; i > 0; i--) {
+        for (let i = cardsArray.length - 1; i > 0; i--) {
             let randIndex = Math.floor(Math.random() * (i + 1));
-            this.cardsArray[randIndex].style.order = i;
-            this.cardsArray[i].style.order = randIndex;
+            cardsArray[randIndex].style.order = i;
+            cardsArray[i].style.order = randIndex;
         }
     }
-
+    getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src;
+    }
     canFlipCard(card) {
-        return true;
-        //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
     }
 }
 
