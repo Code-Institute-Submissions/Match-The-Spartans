@@ -13,8 +13,19 @@ class MatchTheSpartans {
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
-
-        this.shuffleCards();
+        setTimeout(() => {
+            this.shuffleCards();
+            this.countDown = this.startCountDown();
+            this.busy = false;
+        }, 500);
+        this.hideCards();
+        this.timmer.innerText = this.timeRemaining;
+        this.clicker.innerText = this.totalClicks;
+    }
+    hideCards() {
+        this.cardsArray.forEach(card => {
+            card.classList.remove('visible');
+        });
     }
     flipCard(card) {
         if(this.canFlipCard(card)) {
@@ -25,6 +36,21 @@ class MatchTheSpartans {
             //if statement
         }
     }
+
+    startCountDown(){
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.timer.innerText = this.timeRemaining;
+            if(this.timeRemaining === 0)
+                this.gameOver();
+        }, 1000);
+    }
+
+    gameOver(){
+        clearInterval(this.countDown);
+        document.getElementById('game-over-text').classList.add('visible');
+    }
+
 
     shuffleCards(cardsArray) {
         for (let i = this.cardsArray.length - 1; i > 0; i--) {
