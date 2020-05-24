@@ -114,7 +114,7 @@ html {
   transform: rotateY(180deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .game-container {
         grid-template-columns: repeat(2, auto);
     }
