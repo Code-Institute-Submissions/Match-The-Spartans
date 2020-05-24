@@ -1,4 +1,4 @@
-# Opeth band website
+# Match The Spartans
 Milestone Project #2 : Interactive Frontend Development  - Code Institute 
 
 ## Demo
