@@ -16,7 +16,7 @@ The purpose of this project is to create a fun and aesthetically pleasing matchi
 
 - When the game is launched a start screen pops up with a message. The player is told to prepare and click to play.
 
-![](![](assets/images/start-game.jpg "Full picture on the Start screen.")
+![](assets/images/start-game.jpg "Full picture on the Start screen.")
 
 
 - The back of the cards carries a red black Lamda, the first letter of the word Lacedemonians, the name Spartans and surrounding settlements called themselves.
