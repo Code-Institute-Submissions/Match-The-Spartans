@@ -88,6 +88,8 @@ I do not own the rights to any of the above images. All rights are reserved to C
 
 #### I do not own the rights to any of the above images.  This project was created for educational purposes only and falls under the "Fair use" policies.
 
+#### Soldier Icon Images on front of cards
+The Medieval font used in this project was taken from [GoogleFonts](https://fonts.google.com/).
 
 ### Acknowledgements
 - [Code Institute](https://www.codeinstitute.net/) 
@@ -100,6 +102,6 @@ Specifically, to to lay out the grid of cards, how to add the overlays of the st
 Note that the code in the tutorials is much more complicated, including animations, custom design, etc. I kept mine to a bare minimum that was necessary to create a decent game.
 - [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=3008s) - I learned the bulk of the JavaScript code from the tutorials at PortEXE. 
 Specifically: I Learned how to onclick manipulate the overlays to make them dissapear. I learned how to set the time from the start of the game, how to enable overlay when time is out, how to make a card visible on click, how to count the number of flips, how to check for match/missmatch, how to keep matched cards visible and hide missmatched cards, how to shuffle the cards when a new game starts, and how to trigger success/failure overlays depending on the outcome of each game.
-Basicall the bulk of the JavaScript was taught to me in these tutorials. Note that the code in the tutorials is much more complicated, using different sounds, classes to anable animations, etc. 
+Basically the bulk of the JavaScript was taught to me in these tutorials. Note that the code in the tutorials is much more complicated, using different sounds, classes to anable animations, etc. 
 I kept my code to the absolute minimum necessary!
 
