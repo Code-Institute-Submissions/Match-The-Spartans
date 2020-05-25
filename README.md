@@ -91,7 +91,15 @@ I do not own the rights to any of the above images. All rights are reserved to C
 
 ### Acknowledgements
 - [Code Institute](https://www.codeinstitute.net/) 
-- [W3schools.com](https://www.w3schools.com/bootstrap/bootstrap_theme_band.asp) - I have used w3schools to learn how to create the bio section of my project including the body, heading and images as well as hover effects and round effect. I did creat the box and the opaque background myself.
-- [Bootstrap](https://getbootstrap.com/) - The navbar as well as all buttons were taken from bootstrap documentation page and were modified/edited (sizes, colors, hovers, text-alignment, etc).
-
+- [https://scotch.io/](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) - I used scotch.io to learn what a card matching game looks like under the hood. 
+What components are needed, how do these components work in order to produce a card matching game. For instance I learned that a card matching game should consist of a grid of cards.
+I learned that there are different javascript components needed to make the game functional: Code to shuffle the cards, to make time tick, to count flips, to flip cards, to flip them again if they don't match, to let them remain visible if they do match, etc.
+This particular matching game was very simple and schotch.io to me step by step through every single block of code, explaining why it has to be there and how it interacts with the rest of the code..
+- [Web Dev Simplified](https://www.youtube.com/watch?v=28VfzEiJgy4&t=1553s) - I learned the bulk of the html and css code from the tutorials in Web Dev Simplified. 
+Specifically, to to lay out the grid of cards, how to add the overlays of the start game, success and failure messages, how to add different images on the back and front of cards, how to add the visible class that would later enable us to flip cards and among other things the flip animation.
+Note that the code in the tutorials is much more complicated, including animations, custom design, etc. I kept mine to a bare minimum that was necessary to create a decent game.
+- [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=3008s) - I learned the bulk of the JavaScript code from the tutorials at PortEXE. 
+Specifically: I Learned how to onclick manipulate the overlays to make them dissapear. I learned how to set the time from the start of the game, how to enable overlay when time is out, how to make a card visible on click, how to count the number of flips, how to check for match/missmatch, how to keep matched cards visible and hide missmatched cards, how to shuffle the cards when a new game starts, and how to trigger success/failure overlays depending on the outcome of each game.
+Basicall the bulk of the JavaScript was taught to me in these tutorials. Note that the code in the tutorials is much more complicated, using different sounds, classes to anable animations, etc. 
+I kept my code to the absolute minimum necessary!
 

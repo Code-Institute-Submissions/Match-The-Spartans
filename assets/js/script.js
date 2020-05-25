@@ -1,3 +1,6 @@
+// I used online articles and Tutorials to learn how to create an appropriate layout for a card matching game.// 
+//I have cited my sources in the acknowledgments section of the ReadMe file!!!!//
+// Note that I DID NOT copy paste a single line of code, but rather learned from the tutorials to put together a code that would suit this project. //
 class MatchTheSpartans {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
