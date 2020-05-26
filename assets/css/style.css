@@ -2,6 +2,8 @@
 I have cited my sources in the acknowledgments section of the ReadMe file!!!! 
 Note that I DID NOT copy paste a single line of code, but rather learned from the tutorials to put together a code that would suit this project. */
 
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -119,11 +121,11 @@ html {
 }
 
 @media (max-width: 800px) {
-    .game-container {
-        grid-template-columns: repeat(2, auto);
-    }
-    .game-info.container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+  .game-container {
+    grid-template-columns: repeat(2, auto)
+  }
+
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
