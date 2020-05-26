@@ -19,6 +19,14 @@ html {
     min-height: 100vh;
 }
 
+#time-remaining {
+    color:yellow;
+}
+
+#flips {
+    color: yellow;
+}
+
 .title {
     text-align: center;
     font-size: 6em;
