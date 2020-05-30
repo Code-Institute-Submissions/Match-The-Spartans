@@ -88,6 +88,7 @@ class MatchTheSpartans {
   victory() {
     clearInterval(this.countdown);
     document.getElementById("success-text").classList.add("visible"); 
+    flips_results.innerText = this.totalClicks;;//Displays how many flips it took to win.
   }
   /**
    * This function will hide all cards, flip them so the player sees the back.
@@ -162,6 +163,7 @@ class MatchTheSpartans {
    */
   cardMismatch(card1, card2) {
     this.busy = true;
+    
     /**
      * This will create a 1000milisecond delay for smoothness before missmatch are flipped.
      * @param {Function} - Function will wait 1000miliseconds until it is run.
@@ -222,7 +224,8 @@ if (document.readyState == "loading") {
 function ready() {
   let overlays = Array.from(document.getElementsByClassName("overlay-text")); //grabs html collection of elements and create arrays out of it.
   let cards = Array.from(document.getElementsByClassName("card")); //grabs html collection of elements and create arrays out of it.
-  let game = new MatchTheSpartans(100, cards); //instance of this MatchTheSpartans object
+  let game = new MatchTheSpartans(100, cards); //instance of this MatchTheSpartans object.
+  let flips_results = document.getElementById('flips_results');
 
   overlays.forEach((overlay) => {
     //loop over arrays and add click event listeners. Foreach() creates a function for every item of the array.
