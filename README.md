@@ -12,7 +12,14 @@ The front of the cards carries pairs of different soldier icons.
 
 The purpose of this project is to create a fun and aesthetically pleasing matching game. 
 
-**In order to achieve and fun and aesthetically pleasing game I did the following:**
+**Client Stories**
+
+1. As a player I have played numerous memory matching games so I want this one to be different than the typical boring deck of cards. 
+2. As a player I want a unique theme and design than most memory games, maybe a historical theme would be suitable for a game like this.
+3. As a player I want time to trickle down instead of being infinite to make the game more challenging.
+4. As a player I want the score to include the number of flips rather than time elapsed, so that I can try to beat the game in less flips.
+
+**In order to achieve the above fun and aesthetically pleasing game I did the following:**
 
 - When the game is launched a start screen pops up with a message. The player is told to prepare and click to play.
 
@@ -42,6 +49,8 @@ The purpose of this project is to create a fun and aesthetically pleasing matchi
 
 
 >I did my best to keep the colors as of the website as consistent as possible, in order to ensure a possitive user experience.
+
+
  
  ### Wireframe Mockups
  

@@ -5,28 +5,31 @@ I have cited my sources in the acknowledgments section of the ReadMe file extens
 class MatchTheSpartans {
   /**
    * constructor is called once you create an instance of this object.
+   * creates an array out of the collection of card elements.
+   * Sets time at the begining of the game and makes it trickle down second by second.
+   * Ticks one up every time we click a card.
    * @param {Number} totalTime - time at the begining of the game in seconds.
    * @param {Array} cards - holds array of html card elements.
    */
   constructor(totalTime, cards) {
-    this.cardsArray = cards; //creates an array out of the collection of card elements.
-    this.totalTime = totalTime; //time at the begining of the game.
-    this.timeRemaining = totalTime; //time remaining at any given point.
-    this.timer = document.getElementById("time-remaining"); //trickles down time.
-    this.ticker = document.getElementById("flips"); //ticks one up every time we click a card.
+    this.cardsArray = cards; 
+    this.totalTime = totalTime; 
+    this.timeRemaining = totalTime; 
+    this.timer = document.getElementById("time-remaining"); 
+    this.ticker = document.getElementById("flips"); 
   }
 
   /**
    * Function invoked every time game starts.
-   * Sets number of flips to 0, resets times, no cards to check.
-   * Creates empty array for matching cards.
+   * Sets number of flips to 0, resets times, no cards to check in the begining.
+   * Creates empty array to store matching cards.
    */
   startGame() {
-    this.totalClicks = 0; //game starts with 0 flips
-    this.timeRemaining = this.totalTime; //when game starts time remaining reset
-    this.cardToCheck = null; //no cards to check upon begining of the game
-    this.matchedCards = []; //empty array where matched cards will go
-    this.busy = true; //It is busy for the first 500miliseconds and player can not click cards.
+    this.totalClicks = 0; 
+    this.timeRemaining = this.totalTime; 
+    this.cardToCheck = null; 
+    this.matchedCards = []; 
+    this.busy = true; 
 
     /**
      * This makes it so that we wait 500 miliseconds before running the function.
@@ -83,12 +86,12 @@ class MatchTheSpartans {
   /**
    * This function pops up the success message.
    * This function is invoked when the player manages to match the cards within the time given.
-   * This function resets the time.
+   * This function resets the time. Displays how many flips it took to win.
    */
   victory() {
     clearInterval(this.countdown);
     document.getElementById("success-text").classList.add("visible"); 
-    flips_results.innerText = this.totalClicks;;//Displays how many flips it took to win.
+    flips_results.innerText = this.totalClicks;
   }
   /**
    * This function will hide all cards, flip them so the player sees the back.
@@ -104,15 +107,13 @@ class MatchTheSpartans {
     });
   }
   /**
-   * This function will flip a card.
-   * Canflip card is a boolean.
+   * This function will flip a card. Canflip card is a boolean.
    * If the canFlipCard Boolean returns true then card is flippable.
    * This function will iterate number of flips and tick one each time player flips.
    * It will update the flip counts to current value.
    * It will make a card visible when clicked.
    * cardToCheck checks if this is the card to check or if this is the card to match.
-   * The first card a player check is the to check card.
-   * The Second card a player checks is the to match card.
+   * The first card a player check is the to check card. The Second card a player checks is the to match card.
    * @param {Element} card - HTML element representing card.
    */
   flipCard(card) {
@@ -130,7 +131,7 @@ class MatchTheSpartans {
   }
 
   /**
-   * Ff the  card we clicked to check equals  card we clicked to match cards are matched.
+   * If the  card we clicked to check equals  card we clicked to match cards are matched.
    * Else the card we clicked to check does not equal the card we clicked to match, cards are missmatched.
    * When cards are missmatched cardToCheck become null, i.e no card to check so cards are flipped again.
    * @param {Element} card - Represents HTML card element.
