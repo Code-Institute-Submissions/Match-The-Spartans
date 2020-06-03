@@ -17,7 +17,8 @@ The purpose of this project is to create a fun and aesthetically pleasing matchi
 1. As a player I have played numerous memory matching games so I want this one to be different than the typical boring deck of cards. 
 2. As a player I want a unique theme and design than most memory games, maybe a historical theme would be suitable for a game like this.
 3. As a player I want time to trickle down instead of being infinite to make the game more challenging.
-4. As a player I want the score to include the number of flips rather than time elapsed, so that I can try to beat the game in less flips.
+4. As a player I want the score to include the number of flips rather than time elapsed, so that I can try to beat the game in less flips. 
+Time based score is irrelevant since anyone can just click infinetely to reveal all cards and match them. In that case the game becomes a speed rather than memory game.
 
 **In order to achieve the above fun and aesthetically pleasing game I did the following:**
 
@@ -97,7 +98,7 @@ I do not own the rights to any of the above images. All rights are reserved to C
 
 #### I do not own the rights to any of the above images.  This project was created for educational purposes only and falls under the "Fair use" policies.
 
-#### Soldier Icon Images on front of cards
+#### Fonts
 The Medieval font used in this project was taken from [GoogleFonts](https://fonts.google.com/).
 
 ### Acknowledgements
@@ -106,10 +107,10 @@ The Medieval font used in this project was taken from [GoogleFonts](https://font
 What components are needed, how do these components work in order to produce a card matching game. For instance I learned that a card matching game should consist of a grid of cards.
 I learned that there are different javascript components needed to make the game functional: Code to shuffle the cards, to make time tick, to count flips, to flip cards, to flip them again if they don't match, to let them remain visible if they do match, etc.
 This particular matching game was very simple and schotch.io to me step by step through every single block of code, explaining why it has to be there and how it interacts with the rest of the code..
-- [Web Dev Simplified](https://www.youtube.com/watch?v=28VfzEiJgy4&t=1553s) - I learned the bulk of the html and css code from the tutorials in Web Dev Simplified. 
+- [Web Dev Simplified](https://www.youtube.com/watch?v=28VfzEiJgy4&t=1553s) - I learned the bulk of the html and css features from the tutorials in Web Dev Simplified. 
 Specifically, to to lay out the grid of cards, how to add the overlays of the start game, success and failure messages, how to add different images on the back and front of cards, how to add the visible class that would later enable us to flip cards and among other things the flip animation.
 Note that the code in the tutorials is much more complicated, including animations, custom design, etc. I kept mine to a bare minimum that was necessary to create a decent game.
-- [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=3008s) - I learned the bulk of the JavaScript code from the tutorials at PortEXE. 
+- [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=3008s) - I learned the bulk of the JavaScript features from the tutorials at PortEXE. 
 Specifically: I Learned how to onclick manipulate the overlays to make them dissapear. I learned how to set the time from the start of the game, how to enable overlay when time is out, how to make a card visible on click, how to count the number of flips, how to check for match/missmatch, how to keep matched cards visible and hide missmatched cards, how to shuffle the cards when a new game starts, and how to trigger success/failure overlays depending on the outcome of each game.
 Basically the bulk of the gameplay JavaScript was taught to me in these tutorials. Note that the code in the tutorials is much more complicated, using different sounds, classes to anable animations, etc. 
 I kept my code to the absolute minimum necessary!
