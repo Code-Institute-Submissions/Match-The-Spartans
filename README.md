@@ -14,10 +14,10 @@ The purpose of this project is to create a fun and aesthetically pleasing matchi
 
 **Client Stories**
 
-1. As a player I have played numerous memory matching games so I want this one to be different than the typical boring deck of cards. 
-2. As a player I want a unique theme and design than most memory games, maybe a historical theme would be suitable for a game like this.
-3. As a player I want time to trickle down instead of being infinite to make the game more challenging.
-4. As a player I want the score to include the number of flips rather than time elapsed, so that I can try to beat the game in less flips. 
+1. As a player I would like to be presented with a board of cards so that when I start the game I can flip the cards to find the matching ones.
+2. As a player I would like a unique theme and design other than what most memory games have, maybe a historical theme would be suitable for a game like this.
+3. As a player I would like time to trickle down from say 100 seconds instead of it starting at 00:00 and be infinite to make the game more challenging.
+4. As a player I would the score to include the number of flips rather than time elapsed, so that I can try to beat the game in less flips.
 Time based score is irrelevant since anyone can just click infinetely to reveal all cards and match them. In that case the game becomes a speed rather than memory game.
 
 **In order to achieve the above fun and aesthetically pleasing game I did the following:**
@@ -45,7 +45,7 @@ Time based score is irrelevant since anyone can just click infinetely to reveal 
 
 - If the player matches all the cards before time runs out, then a victory message is displayed.
 
-![](assets/images/victory.jpg "Full picture of the victory screen")
+![](assets/images/victory.png "Full picture of the victory screen")
 
 
 
@@ -63,9 +63,14 @@ Time based score is irrelevant since anyone can just click infinetely to reveal 
 1. HTML
 2. CSS
 3. JavaScript
+4. Google Fonts
 
 ## Testing
-This site was physically tested for display as well as gameplay across multiple browsers  (Chrome, Safari, FireFox, Opera) and on multiple mobile devices using Google developer tool(iPad, iPad Pro, iPhone X, iPhone 6/7/8 (Plus), iPhone 5/SE, Pixel 2 (XL), Galaxy S5). The site is compatible and responsive in all of the above.
+This web application was physically tested for display as well as gameplay across multiple browsers  (Chrome, Safari, FireFox, Opera) and on multiple mobile devices using Google developer tool(iPad, iPad Pro, iPhone X, iPhone 6/7/8 (Plus), iPhone 5/SE, Pixel 2 (XL), Galaxy S5). The site is compatible and responsive in all of the above.
+This web application is problematic when run on Internet Explorer.
+
+## Internet Explorer issues
+The game does not properly run on internet explorer. The grid layout is not displayed properly and the game is not playable at all. I plan to resolve these issues in the near future as well as add new feautures to the game.
 
 ## Development
 - I used Gitpod for a developer tool (IDE) in this project.
@@ -101,19 +106,29 @@ I do not own the rights to any of the above images. All rights are reserved to C
 #### Fonts
 The Medieval font used in this project was taken from [GoogleFonts](https://fonts.google.com/).
 
+## Features not yet added
+- I would like to add sounds to the game, a click sound, flip sound, match and mismatch sound, victory and failure sounds.
+- I would also like to add a nice coursor, maybe a sword or a spear, as well as some animations, maybe a zoom and shake animation when cards are matched/mismatched.
+- Moreover I would like to add a scoreboard and save scores on the html local storage, to compage my different attemps with each other.
+- Finally I would like to resolve the internet explorer issues.
+
 ### Acknowledgements
-- [Code Institute](https://www.codeinstitute.net/) 
+- [Code Institute](https://www.codeinstitute.net/) The numerous modules on Javascript.
 - [https://scotch.io/](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) - I used scotch.io to learn what a card matching game looks like under the hood. 
 What components are needed, how do these components work in order to produce a card matching game. For instance I learned that a card matching game should consist of a grid of cards.
 I learned that there are different javascript components needed to make the game functional: Code to shuffle the cards, to make time tick, to count flips, to flip cards, to flip them again if they don't match, to let them remain visible if they do match, etc.
 This particular matching game was very simple and schotch.io to me step by step through every single block of code, explaining why it has to be there and how it interacts with the rest of the code..
 - [Web Dev Simplified](https://www.youtube.com/watch?v=28VfzEiJgy4&t=1553s) - I learned the bulk of the html and css features from the tutorials in Web Dev Simplified. 
-Specifically, to to lay out the grid of cards, how to add the overlays of the start game, success and failure messages, how to add different images on the back and front of cards, how to add the visible class that would later enable us to flip cards and among other things the flip animation.
+Specifically, to lay out the grid of cards, how to add the overlays of the start game, success and failure messages, how to add different images on the back and front of cards, how to add the visible class that would later enable us to flip cards and among other things the flip animation.
 Note that the code in the tutorials is much more complicated, including animations, custom design, etc. I kept mine to a bare minimum that was necessary to create a decent game.
-- [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=3008s) - I learned the bulk of the JavaScript features from the tutorials at PortEXE. 
-Specifically: I Learned how to onclick manipulate the overlays to make them dissapear. I learned how to set the time from the start of the game, how to enable overlay when time is out, how to make a card visible on click, how to count the number of flips, how to check for match/missmatch, how to keep matched cards visible and hide missmatched cards, how to shuffle the cards when a new game starts, and how to trigger success/failure overlays depending on the outcome of each game.
-Basically the bulk of the gameplay JavaScript was taught to me in these tutorials. Note that the code in the tutorials is much more complicated, using different sounds, classes to anable animations, etc. 
-I kept my code to the absolute minimum necessary!
+- [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=3008s) - I learned the bulk of the JavaScript from the tutorials at PortEXE. 
+Specifically: I Learned how to onclick manipulate the overlays to make them dissapear. I learned how to set the time from the start of the game and make it trickle down, how to enable overlay when time is out, how to make a card visible on click, how to count the number of flips, how to check for match/missmatch, how to keep matched cards visible and hide missmatched cards, how to push matched cards into empty arrays to be stored, how to shuffle the cards when a new game starts, and how to trigger success/failure overlays depending on the outcome of each game.
+Basically the bulk of the gameplay JavaScript was taught to me in this tutorial. Note that the code in the tutorials is much more complicated, using different sounds, complicated animations, etc. I kept my code to the absolute minimum necessary, adding features as I saw fit.
+- [HTML5 Games Development by Example Beginners Guide ](https://www.amazon.com/HTML5-Game-Development-Example-Beginners-ebook/dp/B00YSIL7SE/ref=sr_1_fkmr0_1?dchild=1&keywords=html5+games+development+by+example+beginners+guide+by+malazan&qid=1591548663&sr=8-1-fkmr0) by Makzan.
+Chapter 3 of the book is dedicated to making a memory matching game. It takes the reader step by step to create a memory matching game and explains how every single line of code works and why. This book clarified everything the above sources failed to, laid out a clear plan for me and helped me forge the code for my own game.
+- [Head First JavaScript Programming A Brain-Friendly Guide](https://www.amazon.com/Head-First-JavaScript-Programming-Brain-Friendly/dp/144934013X/ref=sr_1_1?dchild=1&keywords=Head+First+JavaScript+Programming+A+Brain-Friendly+Guide&qid=1591548988&sr=8-1) by Eric T. Freeman, Elisabeth Robson.
+When I finished the Code Institute modules regarding JavaScript, I was more confused and felt that I know less that I knew before I started. This book saved me. I dedicated 2 weeks to going through the book which took me step by step to understanding arrays, functions, booleans, constructors, DOM manipulation, and everything javascript related in a fun and playfull game.
+Moreover I enable me to create a minigame (battleship) that solidified the material I have learned. 
 - [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) - For the schuffling of the cards the Fisher-Yates algorithm was used, taken directly from wikipedia.
 I learned how to apply the algorithm in PortEXE's tutorials in the Acknowledgement above this one.
-
+- [JavaScript Documentation](https://jsdoc.app/) - I learned hope to properly document the javascript code at jsdoc.app as well as my mentor Guido Cecilio Bernal.

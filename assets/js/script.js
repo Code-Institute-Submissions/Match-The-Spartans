@@ -1,6 +1,6 @@
-/* I used online articles and Tutorials to learn how to create an appropriate code for a matching game that includes all components needed to make the game functional.
+/* I used online articles, books and Tutorials to learn how to create an appropriate code for a matching game that includes all components needed to make the game functional.
 I have cited my sources in the acknowledgments section of the ReadMe file extensivelly and in detail!!!!
- Note that I DID NOT copy paste a single line of code, but rather learned from the tutorials to put together a code that would suit this project. */
+ */
 
 class MatchTheSpartans {
   /**
@@ -92,6 +92,9 @@ class MatchTheSpartans {
     clearInterval(this.countdown);
     document.getElementById("success-text").classList.add("visible"); 
     flips_results.innerText = this.totalClicks;
+    last_results.innerText = last_results;
+    localStorage.setItem("last_results", this.totalClicks);
+    var last_results = localStorage.getItem("last_results");
   }
   /**
    * This function will hide all cards, flip them so the player sees the back.
@@ -227,6 +230,7 @@ function ready() {
   let cards = Array.from(document.getElementsByClassName("card")); //grabs html collection of elements and create arrays out of it.
   let game = new MatchTheSpartans(100, cards); //instance of this MatchTheSpartans object.
   let flips_results = document.getElementById('flips_results');
+  var last_results = document.getElementById("last_results");
 
   overlays.forEach((overlay) => {
     //loop over arrays and add click event listeners. Foreach() creates a function for every item of the array.
