@@ -67,10 +67,16 @@ Time based score is irrelevant since anyone can just click infinetely to reveal 
 
 ## Testing
 This web application was physically tested for display as well as gameplay across multiple browsers  (Chrome, Safari, FireFox, Opera) and on multiple mobile devices using Google developer tool(iPad, iPad Pro, iPhone X, iPhone 6/7/8 (Plus), iPhone 5/SE, Pixel 2 (XL), Galaxy S5). The site is compatible and responsive in all of the above.
+The 4 column grid layout is proper for bigger screens while I opted out for a 2 column lay out for smaller screen.
+I have physically tested the game in the browsers and devices mentioned above and with the exception of Internet explorer.
+I have tested for layout, functionality and responsive interactive gameplay and it all runs smooth.
 This web application is problematic when run on Internet Explorer.
 
+
 ## Internet Explorer issues
-The game does not properly run on internet explorer. The grid layout is not displayed properly and the game is not playable at all. I plan to resolve these issues in the near future as well as add new feautures to the game.
+The game does not properly run on internet explorer. The grid layout is not displayed properly and the game is not playable at all.
+The JavaScript code seems not to be responsive whatsoever, nor is the grid layout in the css functional.
+I plan to resolve these issues in the near future as well as add new feautures to the game.
 
 ## Development
 - I used Gitpod for a developer tool (IDE) in this project.
